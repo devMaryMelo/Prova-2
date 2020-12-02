@@ -26,7 +26,7 @@ public class Jogador
         {
             System.out.format("%s morreu.", nome);
         } 
-        else if (vida >= 1) 
+        else
         {
             pontos = inimigo.getDano();
             vida = vida - pontos;
