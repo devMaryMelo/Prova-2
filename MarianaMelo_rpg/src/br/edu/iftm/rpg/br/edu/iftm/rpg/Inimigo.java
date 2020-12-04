@@ -22,15 +22,13 @@ public class Inimigo
 
     public void perderVida(int pontos)
     {
+        vida = vida - pontos;
+        System.out.format("%s perdeu %d pontos de vida.\nVida atual: %d\n", nome, pontos, vida);
+        
         if (vida <= 0) 
         {
             System.out.format("%s morreu.\n", nome);
-        }
-        else
-        {
-            vida = vida - pontos;
-            System.out.format("%s perdeu %d pontos de vida.\n", nome, pontos);
-        }
+        }    
     }
 
     public void status()
