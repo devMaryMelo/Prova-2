@@ -16,23 +16,20 @@ public class Jogador
 
     public void atacar(Inimigo inimigo)
     {
-        System.out.format("\n%s atacou  %s e causou %d de dano.\n", this.nome, inimigo.getNome(), dano);
+        System.out.format("\n%s atacou %s e causou %d de dano.\n", this.nome, inimigo.getNome(), dano);
         inimigo.perderVida(this.dano);
     }
 
     public void perderVida(int pontos)
     {
+
         vida = vida - pontos;
+        System.out.format("%s perdeu %d pontos de vida.\nVida atual: %d\n", nome, pontos, vida);
 
         if (vida <= 0) 
         {
             System.out.format("%s morreu.\n", nome);
         } 
-         else
-        {
-            vida = vida - pontos;
-            System.out.format("%s perdeu %d pontos de vida.\n", nome, pontos);
-        }
     }
 
     public void status()
